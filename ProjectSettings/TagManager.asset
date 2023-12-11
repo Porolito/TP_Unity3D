@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pickable
+  - Bullet
+  - PlayerObj
+  - Enemy
+  - Terrain
   layers:
   - Default
   - TransparentFX
@@ -17,7 +21,7 @@ TagManager:
   - 
   - 
   - whatIsGround
-  - 
+  - whatIsPlayer
   - 
   - 
   - 
