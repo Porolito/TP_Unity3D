@@ -9,16 +9,13 @@ using Object = UnityEngine.Object;
 
 public class ZombieCollider : MonoBehaviour
 {
-    public GameObject gameOverPanel;
-
     public Transform GFX;
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("PlayerObj"))
         {
             Debug.Log("caca");
-            gameOverPanel.SetActive(true);
-            Time.timeScale = 0;
+            other.gameObject.GetComponent<PlayerEndCondition>().Die();
         }
         if (other.gameObject.CompareTag("Bullet"))
         {

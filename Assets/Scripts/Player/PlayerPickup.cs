@@ -25,7 +25,7 @@ public class PlayerPickup : MonoBehaviour
             isPicking = true; 
             other.transform.SetParent(itemPos, true);
             other.transform.position = itemPos.position;
-            other.collider.enabled = false;
+            //other.collider.enabled = false;
             other.rigidbody.useGravity = false;
             other.rigidbody.isKinematic = true;
             pickedObject = other.gameObject;

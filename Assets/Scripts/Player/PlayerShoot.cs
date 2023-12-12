@@ -19,6 +19,8 @@ public class PlayerShoot : MonoBehaviour
     public float reloadTime;
 
     private bool readyToShoot = true;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
 
     private void Update()
     {
@@ -35,6 +37,7 @@ public class PlayerShoot : MonoBehaviour
         Debug.Log("caca");
         animator.SetTrigger("Shoot");
         Instantiate(bullet, firePos.position, orientation.rotation);
+        audioSource.PlayOneShot(audioClip);
         readyToShoot = false;
     }
 
