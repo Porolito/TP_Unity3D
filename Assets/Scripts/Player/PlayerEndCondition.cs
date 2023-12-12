@@ -15,6 +15,8 @@ public class PlayerEndCondition : MonoBehaviour
     public void Win()
     {
         Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         winPanel.SetActive(true);
         scoreText.gameObject.SetActive(true);
         scoreText.text = scrapTrigger.scrapCollected.ToString();
@@ -23,6 +25,8 @@ public class PlayerEndCondition : MonoBehaviour
     public void Die()
     {
         Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         gameOverPanel.SetActive(true);
         scoreText.gameObject.SetActive(true);
         scoreText.text = scrapTrigger.scrapCollected.ToString();
