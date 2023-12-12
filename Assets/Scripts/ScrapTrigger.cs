@@ -19,7 +19,6 @@ public class ScrapTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("caca");
         if (other.CompareTag("Pickable"))
         {
             scrapCollected++;

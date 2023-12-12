@@ -34,7 +34,6 @@ public class PlayerShoot : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("caca");
         animator.SetTrigger("Shoot");
         Instantiate(bullet, firePos.position, orientation.rotation);
         audioSource.PlayOneShot(audioClip);

@@ -1,16 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
-using Object = UnityEngine.Object;
 
-public class ZombieCollider : MonoBehaviour
+public class DrownScript : MonoBehaviour
 {
-    public Transform GFX;
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerObj"))
         {
@@ -20,10 +14,5 @@ public class ZombieCollider : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
-
-    public void InitModel(GameObject model)
-    {
-        Instantiate(model, GFX);
     }
 }
