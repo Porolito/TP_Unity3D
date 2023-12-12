@@ -15,7 +15,7 @@ public class PlayerBlink : MonoBehaviour
 
     private bool isWall = false;
     private bool readyToBlink = true;
-    
+
     private void Update()
     {
         isWall = Physics.Raycast(transform.position, transform.forward, distanceBlink + 1f, whatIsGround);

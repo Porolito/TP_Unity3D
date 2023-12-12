@@ -6,7 +6,8 @@ using Random = UnityEngine.Random;
 
 public class ZombieSpawner : MonoBehaviour
 {
-    public GameObject zombie;
+    public GameObject zombiePrefab;
+    public GameObject[] zombieModel;
     
     public int maxZombie;
 
@@ -31,6 +32,7 @@ public class ZombieSpawner : MonoBehaviour
     private void Spawn()
     {
         GameObject choseSpawner = spawnerList[Random.Range(0, spawnerList.Count)];
-        Instantiate(zombie, choseSpawner.transform.position, choseSpawner.transform.rotation);
+        GameObject clone = Instantiate(zombiePrefab, choseSpawner.transform.position, choseSpawner.transform.rotation);
+        clone.GetComponent<ZombieCollider>().InitModel(zombieModel[Random.Range(0,zombieModel.Length)]);
     }
 }
